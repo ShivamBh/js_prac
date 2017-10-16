@@ -41,14 +41,21 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	background-color: #F3B2B2;
+	background-color: #F0E9E9;
+	display: none;
 }
 
 .intro > div {
 	opacity: 0;
+	
+}
+
+.intro.active-intro {
+	display: block;
 }
 
 .intro > div.active {
+
 	opacity: 1;
 	transition: opacity 0.6s ease-in-out;
 }
@@ -74,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro-sub h3 {
 	font-size: 12px;
 	width: 200px;
+	text-transform: none;
 }
 
 .intro-img {
@@ -90,6 +98,3 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
-.active {
-	opacity: 1;
-}
