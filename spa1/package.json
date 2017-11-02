@@ -1,0 +1,17 @@
+{
+  "name": "spa1",
+  "version": "1.0.0",
+  "description": "Single Page Application Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SPA"
+  ],
+  "author": "Shivam Bhattacharjee",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.5.0"
+  }
+}
