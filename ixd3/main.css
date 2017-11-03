@@ -47,7 +47,14 @@ h1, h2, h3, h4, h5, h6 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 10;
+	opacity: 0;
 }
+
+/*.content-outer-active {
+	z-index: 100;
+	opacity: 1;
+}*/
 
 /* grey */
 .content_inner {
