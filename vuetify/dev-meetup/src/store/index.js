@@ -10,19 +10,25 @@ export const store = new Vuex.Store({
 				imageUrl: 'https://cdn.tutsplus.com/vector/uploads/legacy/articles/inspir_20_vector_flickr_groups/vector_art_2.jpg', 
 				id: 'asdfgaghasdf33', 
 				title: 'What up !',
-				date: '2017-11-10'
+				date: '2017-11-10',
+				location: 'Axom',
+				description: "que paso, mi hermano. NanjaKoreya temeira"				
 			},
 			{
 				imageUrl: 'https://i.pinimg.com/564x/28/13/e2/2813e2d7581a3aaaef2b9d7f370c7fa1--ninja-girl-japanese-warrior.jpg',
 			 	id: 'asdfgasdasdasdf33', 
 			 	title: 'Hello peeps!',
-			 	date: '2017-11-12'
+				date: '2017-11-12',
+				location: 'Axom',
+				description: "que paso, mi hermano. NanjaKoreya peeps"
 			 },
 			{
 				imageUrl: 'https://static.vecteezy.com/system/resources/previews/000/139/749/non_2x/bamboo-artwork-free-vector.jpg',
 			 	id: 'sdfgshjsergdf', 
 			 	title: 'Ki laage!',
-			 	date: '2017-11-22'
+				date: '2017-11-22',
+				location: 'Axom',
+				description: "que paso, mi hermano. NanjaKoreya laage"				
 			}
 		],
 		user: {
@@ -30,8 +36,26 @@ export const store = new Vuex.Store({
 			registeredMeetups: ['asdgasdhjdasg']
 		}
 	},
-	mutations: {},
-	actions: {},
+	mutations: {
+		createMeetup (state, payload) {
+			state.loadedMeetups.push(payload)
+		}
+	},
+	actions: {
+		createMeetup ({commit}, payload) {
+			const meetup = {
+				title: payload.title,
+				location: payload.location,
+				imageUrl: payload.imageUrl,
+				description: payload.description,
+				date: payload.date,
+				id: "asdhfklijadgflasdkj"
+			}
+
+			//firebase logic 
+			commit('createMeetup', meetup)
+		}
+ 	},
 	getters: {
 		loadedMeetups (state) {
 			return state.loadedMeetups.sort((meetupA, meetupB) => {
