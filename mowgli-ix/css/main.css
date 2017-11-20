@@ -1,5 +1,6 @@
 body {
 	padding: 0 20px;
+	overflow: hidden;
 }
 /* override bootstrap gutter */
 .no-gutters {
@@ -16,7 +17,9 @@ body {
 
 /* main styles */
 .main-content {
-	min-height: 100vh;
+	/* min-height: 100vh; */
+	height: 400vh;
+	position: relative;
 }
 
 .row-home {
