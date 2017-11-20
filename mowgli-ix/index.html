@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,39 +9,33 @@
         
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
-        <link rel="stylesheet" href="normalize.css"> 
-        <link rel="stylesheet" href="main.css"> 
+        <link rel="stylesheet" href="css/bootstrap.css"> 
+        <link rel="stylesheet" href="css/main.css"> 
     </head>
     <body>
         
 
         <!-- Add your site or application content here -->
-       <header class="site-header">
-           <div class="header-wrapper">
-               <div class="logo-wrapper">
-                   <img src="img/Mowglitrails_LOGO.png" alt="Logo">
-               </div>
-               <div class="menu-wrapper"></div>
-           </div>
-       </header>
-
-       <main class="content-wrapper" id="homeControl">
-           <section class="home-intro home-sections"></section>
-           <section class="home-dest home-sections"></section>
-           <section class="home-tours home-sections"></section>
-           <section class="home-blog home-sections"></section>
-           <section class="home-contact home-sections"></section>
-        </main>
-
+       <div class="container-fluid main-content" id="home-scroll">
+            <section class="row row-intro row-home justify-content-center">
+                <div class="col-6 home-content intro-content align-self-center"></div>
+            </section>
+            <section class="row row-dest row-home justify-content-center">
+                <div class="col-6 home-content dest-content align-self-center"></div>
+            </section>
+            <section class="row row-tours row-home justify-content-center">
+                <div class="col-6 home-content tours-content align-self-center"></div>
+            </section>
+            <section class="row row-blog row-home justify-content-center">
+                <div class="col-6 home-content blog-content align-self-center"></div>
+            </section>
+       </div>
 
 
         
         
-        
-        <script src="anime.js"></script>
-        <script src="main.js"></script>
+        <script src="js/scrollMonitor.js"></script>
+        <script src="js/anime.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

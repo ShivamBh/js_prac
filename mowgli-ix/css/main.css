@@ -1,0 +1,61 @@
+body {
+	padding: 0 20px;
+}
+/* override bootstrap gutter */
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.no-gutters > .col, 
+.no-gutters > [class*="col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+
+/* main styles */
+.main-content {
+	min-height: 100vh;
+}
+
+.row-home {
+	height: 100vh;
+}
+
+.row-intro	{
+	background-color: #5e66b7;
+}
+
+.row-dest	{
+	background-color: #7239a4;
+}
+
+.row-tours	{
+	background-color: #c14542;
+}
+
+.row-blog	{
+	background-color: #0a8d94;
+}
+
+.home-content {
+	height: 400px;
+	/* background-color: #94cdcd; */
+}
+
+.intro-content {
+	background-color: #de6055;
+}
+
+.dest-content {
+	background-color: #8471c8;
+}
+
+.tours-content {
+	background-color: #7bebdb;
+}
+
+.blog-content {
+	background-color: #7e9ce8;
+}
