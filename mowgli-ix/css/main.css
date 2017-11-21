@@ -25,7 +25,7 @@ body {
 .row-home {
 	height: 100vh;
 }
-
+/* 
 .row-intro	{
 	background-color: #5e66b7;
 }
@@ -40,11 +40,16 @@ body {
 
 .row-blog	{
 	background-color: #0a8d94;
-}
+} */
 
 .home-content {
-	height: 400px;
+	height: 0;
 	/* background-color: #94cdcd; */
+	
+}
+
+.home-active {
+	height: 400px;
 }
 
 .intro-content {

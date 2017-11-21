@@ -78,6 +78,15 @@ HomeController.prototype.switchHomeNext = function(current) {
         top: -(h*currSc),
         easing: 'easeInOutQuad'
     })
+    var animEl = homeSections[currSc].children[0];
+    var anim = anime({
+        targets: animEl,
+        height: "400px",
+        easing: 'easeInOutQuad',
+        duration: 600,
+        delay: 400
+    });
+    console.log(animEl[0]);
     //console.log('scroll down')
 }
 
