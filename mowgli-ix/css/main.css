@@ -16,54 +16,65 @@ body {
 
 
 /* main styles */
-.main-content {
-	/* min-height: 100vh; */
-	height: 400vh;
-	position: relative;
+.site-header {
+	height: 11.3131vh;
+	background-color: #ecf3f3;
 }
 
-.row-home {
-	height: 100vh;
-}
-/* 
-.row-intro	{
-	background-color: #5e66b7;
+.header-wrap {
+	height: 100%;
 }
 
-.row-dest	{
-	background-color: #7239a4;
+.header-content {
+	height: 100%;
 }
 
-.row-tours	{
-	background-color: #c14542;
+.header-content > div {
+	height: 100%;
 }
 
-.row-blog	{
-	background-color: #0a8d94;
-} */
-
-.home-content {
-	height: 0;
-	/* background-color: #94cdcd; */
-	
+.logo-wrap {
+	height: auto;
+	/* background-color: #204e4e; */
+	background-image: url('../img/logo_mowgli.png');
 }
 
-.home-active {
-	height: 400px;
+.logo-wrap > img {
+	height: auto;
+	width: 100%;
 }
 
-.intro-content {
-	background-color: #de6055;
+.menu-wrap {
+	height: 100%;
+	/* background-color: #c1e9e9; */
 }
 
-.dest-content {
-	background-color: #8471c8;
+.burger-icon {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.tours-content {
-	background-color: #7bebdb;
+.burger-top {
+	width: 55px;
+	height: 3px;
+	background-color: #e06d2b;
+	margin-bottom: 2px;
 }
 
-.blog-content {
-	background-color: #7e9ce8;
+.burger-text {
+	font-family: 'Helvetica', 'sans-serif';
+	font-weight: lighter;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+}
+
+.burger-bottom {
+	width: 55px;
+	height: 3px;
+	background-color: #e06d2b;
+	margin-top: 2px;
 }
