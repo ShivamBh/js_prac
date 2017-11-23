@@ -1,9 +1,10 @@
-// //vars
-// var scrollContainer = document.getElementById("home-scroll");
-// var homeIntro = document.getElementById("home-intro");
-// var homeDest = document.getElementById("home-dest");
-// var homeTours = document.getElementById("home-tours");
-// var homeBlog = document.getElementById("home-blog");
+//vars
+var menuEl = document.querySelector('.nav-menu');
+var scrollContainer = document.getElementById("home-scroll");
+var homeIntro = document.getElementById("home-intro");
+var homeDest = document.getElementById("home-dest");
+var homeTours = document.getElementById("home-tours");
+var homeBlog = document.getElementById("home-blog");
 
 // //scroll monitor watchers
 // var introWatcher = scrollMonitor.create(homeIntro),
@@ -103,7 +104,55 @@
 //     })
 // }
 
-
-
 // //let object go freeeeee :)
 // var homeObj = new HomeController(scrollContainer);
+
+//menu controller 
+function MenuController(el) {
+    this.el = el;
+    this.isOpen = false;
+    this.isAnimating = false;
+    this.el.addEventListener("click", this, false);
+    //this.init;
+}
+
+// MenuController.prototype.init = function() {
+    
+// }
+
+MenuController.prototype.handleEvent = function(e) {
+    console.log('menu click');
+    //in-icon animation to register click
+
+    //menu-slide down, menu-elements transition in
+    this.menuAnim();
+}
+
+//menu icon transition
+MenuController.prototype.menuIconAnim = function() {
+    
+}
+
+
+//menu full screen transition
+
+MenuController.prototype.menuAnim = function() {
+    
+
+    //anime timeline
+
+    // var menuTl = anime.timeline();
+    // menuTl.add({
+
+    // })
+    var pageTr = anime({
+        targets: menuEl,
+        opacity: 1,
+        top: ["-100vh", "0"],
+        easing: 'easeInOutCirc',
+        duration: 900
+    });
+    console.log(this.isOpen);
+}
+
+var menuInit = new MenuController(document.getElementById("nav-burger"));
