@@ -20,21 +20,21 @@ var homeBlog = document.getElementById("home-blog");
 
 // console.log(homeSections);
 
-// //debounce function ( - David Walsh Blog)
-// function debounce(func, wait, immediate) {
-// 	var timeout;
-// 	return function() {
-// 		var context = this, args = arguments;
-// 		var later = function() {
-// 			timeout = null;
-// 			if (!immediate) func.apply(context, args);
-// 		};
-// 		var callNow = immediate && !timeout;
-// 		clearTimeout(timeout);
-// 		timeout = setTimeout(later, wait);
-// 		if (callNow) func.apply(context, args);
-// 	};
-// };
+//debounce function ( - David Walsh Blog)
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
 
 // //Home Scroll Controller object
 // function HomeController(el) {
@@ -134,11 +134,13 @@ MenuController.prototype.menuIconAnim = function() {
 }
 
 
-//menu full screen transition
+//menu screen transition
 
 MenuController.prototype.menuAnim = function() {
     
-
+    //menu text switch
+    var menuText = document.querySelector(".burger-text-menu");
+    this.switchMenuText(menuText);
     //anime timeline
 
     // var menuTl = anime.timeline();
@@ -152,7 +154,66 @@ MenuController.prototype.menuAnim = function() {
         easing: 'easeInOutCirc',
         duration: 900
     });
-    console.log(this.isOpen);
+    
 }
+
+MenuController.prototype.switchMenuText = function(menuEl) {
+
+    var closeText = "Close";
+    var openText = "Menu";    
+
+    if (this.isOpen == false) {
+       var menuOpen = anime({
+            targets: menuEl,
+            left: "35%",
+            opacity: 0,
+            duration: 800,
+            easing: "easeOutQuad"
+        });
+       setTimeout(function() {
+          menuEl.innerHTML = closeText;
+            menuEl.style.left = "-35%";
+
+            var menuClose = anime({
+                targets: menuEl,
+                left: 0,
+                opacity: 1,
+                duration: 800,
+                easing: "easeOutQuad"
+            });  
+       }, 600);
+        
+        this.isOpen = true;
+    }
+    else {
+        var menuOpen = anime({
+            targets: menuEl,
+            left: "35%",
+            opacity: 0,
+            duration: 800,
+            easing: "easeOutQuad"
+        });
+
+        setTimeout(function() {
+            menuEl.innerHTML = openText;
+            menuEl.style.left = "-35%";
+
+            var menuClose = anime({
+                targets: menuEl,
+                left: 0,
+                opacity: 1,
+                duration: 800,
+                easing: "easeOutQuad"
+            });  
+        }, 600);
+        
+
+        this.isOpen = false;
+
+    }
+
+    
+
+};
 
 var menuInit = new MenuController(document.getElementById("nav-burger"));

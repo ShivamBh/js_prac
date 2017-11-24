@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Convergence');
+
+
 body {
 	padding: 0 20px;
 	overflow: hidden;
@@ -25,7 +29,7 @@ body {
 	width: calc(100% - 40px);
 	margin: 0 auto;
 	position: absolute;
-	/* background-color: #181a1a; */
+	 background-color: #ecf3f3; 
 	left: 20px;
 	top: 0;
 	opacity: 0;
@@ -50,7 +54,7 @@ body {
 
 .nav-items-wrap {
 	margin-top: 10vh;
-	height: 70vh;
+	height: 50vh;
 	/* background-color: #237e7e; */
 	display: flex;
 	flex-direction: column;
@@ -67,6 +71,7 @@ body {
 }
 
 .nav-cta > a {
+	font-family: 'Barlow Condensed', 'sans-serif';
 	font-weight: 700;
 	color: #343535;
 	text-decoration: none;
@@ -84,12 +89,13 @@ body {
 	color: #343535;
 	font-weight: 700;
 	font-size: 1.5em;
+	font-family: 'Barlow Condensed', 'sans-serif';
 	/* text-align: center; */
 }
 
 .nav-aux-items-wrap {
 	margin-top: 10vh;
-	height: 70vh;
+	height: 50vh;
 	/* background-color: #0a5180; */
 	display: flex;
 	flex-direction: column;
@@ -104,21 +110,34 @@ body {
 }
 
 .newsletter-text {
+	font-family: 'Barlow Condensed', 'sans-serif';
 	font-weight: 700;
 	font-size: 1.5em;
 }
 
 .newsletter-form input{
+
 	border: none;
 	width: 100%;
 	padding: 10px;
 	margin-bottom: 10px;
+	background-color: #d14141;
+	font-family: 'Barlow Condensed', 'sans-serif';
+	color: #ecf3f3;
+	font-weight: 100;
+	font-size: 1.5em;
+
 }
 
 .newsletter-form button {
 	border: none;
 	width: 120px;
 	padding: 8px;
+	background-color: #343535;
+	font-family: 'Barlow Condensed', 'sans-serif';
+	color: #ecf3f3;
+	font-weight: 100;
+	font-size: 1.5em;
 }
 
 
@@ -164,17 +183,19 @@ body {
 
 .burger-icon {
 	height: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	
 }
 
 .burger-top {
-	width: 55px;
+	width: 60px;
 	height: 3px;
 	background-color: #e06d2b;
 	margin-bottom: 2px;
+}
+
+.burger-text {
+	width: inherit;
+	
 }
 
 .burger-text > span {
@@ -183,6 +204,8 @@ body {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: #3e4141;	
+	position: relative;
+	/*left: -100%;*/
 }
 
 .burger-text > span.menu-active {
@@ -192,7 +215,7 @@ body {
 } 
 
 .burger-bottom {
-	width: 55px;
+	width: 60px;
 	height: 3px;
 	background-color: #e06d2b;
 	margin-top: 2px;
