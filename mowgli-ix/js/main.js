@@ -6,20 +6,7 @@ var homeDest = document.getElementById("home-dest");
 var homeTours = document.getElementById("home-tours");
 var homeBlog = document.getElementById("home-blog");
 
-// //scroll monitor watchers
-// var introWatcher = scrollMonitor.create(homeIntro),
-//     destWatcher = scrollMonitor.create(homeDest),
-//     toursWatcher = scrollMonitor.create(homeTours),
-//     blogWatcher = scrollMonitor.create(homeBlog);
-
-// var currSc = 0,
-//     prevSc = null,
-//     nextSc = 1,
-//     dir = 0,
-//     homeSections = document.getElementsByClassName("row-home");
-
-// console.log(homeSections);
-
+// utility functions
 //debounce function ( - David Walsh Blog)
 function debounce(func, wait, immediate) {
 	var timeout;
@@ -35,6 +22,23 @@ function debounce(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 };
+
+
+// //scroll monitor watchers
+// var introWatcher = scrollMonitor.create(homeIntro),
+//     destWatcher = scrollMonitor.create(homeDest),
+//     toursWatcher = scrollMonitor.create(homeTours),
+//     blogWatcher = scrollMonitor.create(homeBlog);
+
+// var currSc = 0,
+//     prevSc = null,
+//     nextSc = 1,
+//     dir = 0,
+//     homeSections = document.getElementsByClassName("row-home");
+
+// console.log(homeSections);
+
+
 
 // //Home Scroll Controller object
 // function HomeController(el) {
@@ -111,9 +115,8 @@ function debounce(func, wait, immediate) {
 function MenuController(el) {
     this.el = el;
     this.isOpen = false;
-    this.isAnimating = false;
     this.el.addEventListener("click", this, false);
-    //this.init;
+    
 }
 
 // MenuController.prototype.init = function() {
@@ -128,32 +131,69 @@ MenuController.prototype.handleEvent = function(e) {
     this.menuAnim();
 }
 
-//menu icon transition
-MenuController.prototype.menuIconAnim = function() {
-    
-}
-
-
 //menu screen transition
+
+function menuTimeline() {
+    var menuTl = anime.timeline();
+    menuTl
+        .add({
+            targets: menuEl,
+            opacity: 1,
+            top: ["-100vh", "0"],
+            easing: 'easeInOutCirc',
+            duration: 900
+        })
+        .add({
+            targets: document.querySelectorAll(".nav-cta"),
+            duration: 700,
+            opacity: [0, 1],
+            translateY: [-40, 0],
+            easing: "easeInQuad"
+        })
+        .add({
+            targets: ".nav-items > a",
+            duration: 500,
+            translateY: [-30, 0],
+            opacity: [0, 1],
+            easing: "easeInQuad",
+            // delay: function(el, i, l) {
+            //     return i * 120;
+            // },
+            offset: "-=700"
+        })
+        .add({
+            targets: ".newsletter-text",
+            duration: 600,
+            opacity: [0, 1],
+            translateY: [-30, 0],
+            easing: "easeInQuad"
+            
+        })
+        .add({
+            targets: ".newsletter-form",
+            duration: 600,
+            opacity: [0, 1],
+            translateY: [-30, 0],
+            easing: "easeInQuad",
+            offset: "-=600"
+        });
+    return menuTl;
+}
 
 MenuController.prototype.menuAnim = function() {
     
     //menu text switch
     var menuText = document.querySelector(".burger-text-menu");
     this.switchMenuText(menuText);
-    //anime timeline
+    
+    if (this.isOpen == true) {
+        menuTimeline().play();
+    }
+    else {
+        menuTimeline().reverse();
+    }
 
-    // var menuTl = anime.timeline();
-    // menuTl.add({
-
-    // })
-    var pageTr = anime({
-        targets: menuEl,
-        opacity: 1,
-        top: ["-100vh", "0"],
-        easing: 'easeInOutCirc',
-        duration: 900
-    });
+    // menuTl.reverse();
     
 }
 

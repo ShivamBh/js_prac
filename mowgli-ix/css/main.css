@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya:500i');
 
 
 body {
 	padding: 0 20px;
-	overflow: hidden;
+	/* overflow: hidden; */
 	position: relative;
 }
 
@@ -31,7 +32,7 @@ body {
 	position: absolute;
 	 background-color: #ecf3f3; 
 	left: 20px;
-	top: 0;
+	top: -100vh;
 	opacity: 0;
 	z-index: 10;
 }
@@ -68,6 +69,7 @@ body {
 	background-color: #95eeea;
 	border-radius: 4px;
 	cursor: pointer;
+	position: relative;
 }
 
 .nav-cta > a {
@@ -77,6 +79,7 @@ body {
 	text-decoration: none;
 	font-size: 1.5em;
 	text-align: center;
+
 }
 
 .nav-items {
@@ -144,7 +147,7 @@ body {
 .site-header {
 	height: 11.3131vh;
 	background-color: #ecf3f3;
-	position: absolute;
+	position: fixed;
 	width: calc(100% - 40px);
 	margin: 0 auto;
 	z-index: 20;
@@ -183,11 +186,10 @@ body {
 
 .burger-icon {
 	height: auto;
-	
 }
 
 .burger-top {
-	width: 60px;
+	width: 45px;
 	height: 3px;
 	background-color: #e06d2b;
 	margin-bottom: 2px;
@@ -199,7 +201,7 @@ body {
 }
 
 .burger-text > span {
-	font-family: 'Helvetica', 'sans-serif';
+	font-family: 'Barlow Condensed', 'sans-serif';
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -215,8 +217,70 @@ body {
 } 
 
 .burger-bottom {
-	width: 60px;
+	width: 45px;
 	height: 3px;
 	background-color: #e06d2b;
 	margin-top: 2px;
 }
+
+.site-content {
+	min-height: 100vh;
+	width: 100%;
+	background-color: #343535;
+	padding-top: 11.3131vh; 
+}
+
+.home-slide {
+	height: calc(100vh - 11vh);
+	width: 100%;
+	padding: 0;
+}
+
+.home-intro {
+	background-color: #daa8a8;
+}
+
+.intro-row {
+	height: 72.1212%;
+	width: 100%;
+	margin: 0;
+	/* background-color: #411231; */
+}
+
+.intro-video-wrap {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #343535;
+}
+
+.video-content {
+
+}
+
+.scroll-icon {
+	background-color: #411231;
+	height: 100px;
+	width: 100px;
+}
+
+.spacer {
+
+}
+
+.home-dest {
+	background-color: #411231;
+}
+
+.home-tours {
+	background-color: #f14c4c;
+}
+
+.home-blog {
+	background-color: #3b9687;
+}
+
+.home-contact {
+	background-color: #203f7e;
+}
+
