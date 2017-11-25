@@ -119,10 +119,6 @@ function MenuController(el) {
     
 }
 
-// MenuController.prototype.init = function() {
-    
-// }
-
 MenuController.prototype.handleEvent = function(e) {
     console.log('menu click');
     //in-icon animation to register click
@@ -130,9 +126,7 @@ MenuController.prototype.handleEvent = function(e) {
     //menu-slide down, menu-elements transition in
     this.menuAnim();
 }
-
 //menu screen transition
-
 function menuTimeline() {
     var menuTl = anime.timeline();
     menuTl
@@ -181,7 +175,7 @@ function menuTimeline() {
 }
 
 MenuController.prototype.menuAnim = function() {
-    
+ 
     //menu text switch
     var menuText = document.querySelector(".burger-text-menu");
     this.switchMenuText(menuText);

@@ -134,6 +134,7 @@ body {
 
 .newsletter-form button {
 	border: none;
+	border-radius: 6px;
 	width: 120px;
 	padding: 8px;
 	background-color: #343535;
@@ -145,7 +146,7 @@ body {
 
 
 .site-header {
-	height: 11.3131vh;
+	height: 11.313131vh;
 	background-color: #ecf3f3;
 	position: fixed;
 	width: calc(100% - 40px);
@@ -227,7 +228,7 @@ body {
 	min-height: 100vh;
 	width: 100%;
 	background-color: #343535;
-	padding-top: 11.3131vh; 
+	padding-top: 11.313131vh; 
 }
 
 .home-slide {
@@ -237,11 +238,11 @@ body {
 }
 
 .home-intro {
-	background-color: #daa8a8;
+	background-color: #ffffff;
 }
 
 .intro-row {
-	height: 72.1212%;
+	height: auto;
 	width: 100%;
 	margin: 0;
 	/* background-color: #411231; */
@@ -250,25 +251,46 @@ body {
 .intro-video-wrap {
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	background-color: #343535;
+	height: 72.121212vh;
+	background-color: #7a7c7c;
 }
 
 .video-content {
 
 }
 
+.intro-spacer {
+	margin-top: 20px;
+	height: 14.5454vh;
+	width: 100%;
+	display: flex;
+}
+
 .scroll-icon {
-	background-color: #411231;
-	height: 100px;
-	width: 100px;
+	background-color: #b0e2ac;
+	width: 39.5833vw;
+	height: 100%;
+	padding: 0;
+	display: inline;
+	margin-right: 20px;
 }
 
 .spacer {
-
+	padding: 0;
+	width: 57.2916vw;
+	height: 100%;
+	background-color: #58b657;
+	display: inline;
 }
 
 .home-dest {
+	/* background-color: #411231; */
+	position: relative;
+}
+
+.home-dest-image-main {
+	height: 72.121212vh;
+	width: 38.7vw;
 	background-color: #411231;
 }
 
