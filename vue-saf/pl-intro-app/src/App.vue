@@ -16,13 +16,18 @@
       </form>
 
       <hr>
-      <div class="card text-white bg-dark mb-2" v-for="message in messages">
-        <div class="card-body" >
-          <h4 class="card-title">{{message.title}}</h4>
-          <h6 class="card-subtitle mb-2 text-muted"> added on: {{message.timestamp}}</h6>
-          <p class="card-text">{{message.text}}</p>
-        </div>
+       <div class="card-columns">
+        <card class="card-outline-success"
+        :title="'Hello!'"
+        :text="'This is our fixed card!'"
+        :footer="'Added on ' + dateToString(Date.now())">
+        </card>
+
+        <card v-for="message in reverse(messages)" 
+        v-bind:message="message">
+        </card>
       </div>
+      
     </div>
     
   </div>
@@ -30,6 +35,8 @@
 
 <script>
   import Firebase from 'firebase'
+  import { dateToString, reverse } from '../utils/utils'
+  import Card from './components/Card'
 
   let config = {
     apiKey: "AIzaSyBVV9al1VAgOzs5_yxQOPU_DBrJAkUTVr8",
@@ -69,7 +76,12 @@
         this.newMessage.text = ''
         this.newMessage.title = ''
         this.newMessage.timestamp = null
-      }
+      },
+      dateToString: dateToString,
+      reverse
+    },
+    components: {
+      Card
     }
   }
 </script>

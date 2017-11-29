@@ -1,11 +1,41 @@
-//vars
-var menuEl = document.querySelector('.nav-menu');
-var scrollContainer = document.getElementById("home-scroll");
-var homeIntro = document.getElementById("home-intro");
-var homeDest = document.getElementById("home-dest");
-var homeTours = document.getElementById("home-tours");
-var homeBlog = document.getElementById("home-blog");
+// //vars
+// var scrollContainer = document.getElementById("home-scroll");
+// var homeIntro = document.getElementById("home-intro");
+// var homeDest = document.getElementById("home-dest");
+// var homeTours = document.getElementById("home-tours");
+// var homeBlog = document.getElementById("home-blog");
 
+<<<<<<< HEAD
+// //scroll monitor watchers
+// var introWatcher = scrollMonitor.create(homeIntro),
+//     destWatcher = scrollMonitor.create(homeDest),
+//     toursWatcher = scrollMonitor.create(homeTours),
+//     blogWatcher = scrollMonitor.create(homeBlog);
+
+// var currSc = 0,
+//     prevSc = null,
+//     nextSc = 1,
+//     dir = 0,
+//     homeSections = document.getElementsByClassName("row-home");
+
+// console.log(homeSections);
+
+// //debounce function ( - David Walsh Blog)
+// function debounce(func, wait, immediate) {
+// 	var timeout;
+// 	return function() {
+// 		var context = this, args = arguments;
+// 		var later = function() {
+// 			timeout = null;
+// 			if (!immediate) func.apply(context, args);
+// 		};
+// 		var callNow = immediate && !timeout;
+// 		clearTimeout(timeout);
+// 		timeout = setTimeout(later, wait);
+// 		if (callNow) func.apply(context, args);
+// 	};
+// };
+=======
 // utility functions
 //debounce function ( - David Walsh Blog)
 function debounce(func, wait, immediate) {
@@ -22,6 +52,7 @@ function debounce(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 };
+>>>>>>> 4f35ca5c20838a93ac2c3380f25535be33061f97
 
 
 // //scroll monitor watchers
@@ -108,6 +139,12 @@ function debounce(func, wait, immediate) {
 //     })
 // }
 
+<<<<<<< HEAD
+
+
+// //let object go freeeeee :)
+// var homeObj = new HomeController(scrollContainer);
+=======
 // //let object go freeeeee :)
 // var homeObj = new HomeController(scrollContainer);
 
@@ -249,5 +286,5 @@ MenuController.prototype.switchMenuText = function(menuEl) {
     
 
 };
+>>>>>>> 4f35ca5c20838a93ac2c3380f25535be33061f97
 
-var menuInit = new MenuController(document.getElementById("nav-burger"));
