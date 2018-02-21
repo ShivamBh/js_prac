@@ -1,0 +1,35 @@
+{
+  "name": "three-js-prac",
+  "version": "1.0.0",
+  "description": "practice three js and tutorial solutions",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivamBh/js_prac.git"
+  },
+  "keywords": [
+    "ThreeJS",
+    "javascript",
+    "webGL"
+  ],
+  "author": "shibujoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShivamBh/js_prac/issues"
+  },
+  "homepage": "https://github.com/ShivamBh/js_prac#readme",
+  "dependencies": {
+    "three": "^0.90.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "http-server": "^0.11.1",
+    "webpack": "^3.11.0"
+  }
+}
