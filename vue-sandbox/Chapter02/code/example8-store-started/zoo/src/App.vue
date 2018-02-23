@@ -5,7 +5,7 @@
       <div class="col-3"><img width="100%" :src="name ? gladSrc : sadSrc"></div>
     </div>
     <hr />
-    <introduction @nameChanged="onNameChanged" :initialName="name"></introduction>
+    <introduction></introduction>
     <hr />
     <h2><span v-if="name">{{name}}! </span>Select your animals</h2>
     <div class="row">
@@ -21,32 +21,7 @@
 <script>
   import Zoo from './components/Zoo'
   import Introduction from './components/Introduction'
-
-  var animalsForZoo = []
-  var animalsCodes = {
-    dog: '&#x1f436;',
-    cat: '&#x1f638;',
-    monkey: '&#x1f435;',
-    unicorn: '&#x1f984;',
-    tiger: '&#x1f42f;',
-    mouse: '&#x1f42d;',
-    rabbit: '&#x1f430;',
-    cow: '&#x1f42e;',
-    whale: '&#x1f433;',
-    horse: '&#x1f434;',
-    pig: '&#x1f437;',
-    frog: '&#x1f438;',
-    koala: '&#x1f43c;'
-  }
-  var animals = Object.keys(animalsCodes)
-  var data = {
-    name: 'Olga',
-    animals,
-    animalsCodes,
-    animalsForZoo,
-    sadSrc: '../static/images/sad.png',
-    gladSrc: '../static/images/glad.png'
-  }
+  
   export default {
     name: 'app',
     components: {
@@ -54,11 +29,30 @@
       Introduction
     },
     data () {
-      return data
+      return {
+        animalsForZoo: []
+      }
     },
     methods: {
       onNameChanged (newName) {
         this.name = newName
+      }
+    },
+    computed: {
+      name () {
+        this.$store.state.name
+      },
+      animals () {
+        this.$store.state.animals
+      },
+      animalCodes () {
+        this.$store.state.animalCodes
+      },
+      sadSrc () {
+        this.$store.state.sadSrc
+      },
+      gladSrc () {
+        this.$store.state.gladSrc
       }
     }
   }

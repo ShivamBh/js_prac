@@ -5,10 +5,7 @@
       <div class="col-3"><img width="100%" :src="name ? gladSrc : sadSrc"></div>
     </div>
     <hr />
-    <div>
-      <label for="name" :class="{green: name, red: !name}">What's your name? </label>
-      <input id="name" type="text" v-model.trim="name">
-    </div>
+    <introduction @nameChanged="onNameChanged" :initialName="name"></introduction>
     <hr />
     <h2><span v-if="name">{{name}}! </span>Select your animals</h2>
     <div class="row">
@@ -23,6 +20,7 @@
 
 <script>
   import Zoo from './components/Zoo'
+  import Introduction from './components/Introduction'
 
   var animalsForZoo = []
   var animalsCodes = {
@@ -52,10 +50,16 @@
   export default {
     name: 'app',
     components: {
-      Zoo
+      Zoo,
+      Introduction
     },
     data () {
       return data
+    },
+    methods: {
+      onNameChanged (newName) {
+        this.name = newName
+      }
     }
   }
 </script>
